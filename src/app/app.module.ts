@@ -23,6 +23,9 @@ import { MatOptionModule } from '@angular/material/core';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth'
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -50,7 +53,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatSlideToggleModule,
     MatSelectModule,
     MatOptionModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]

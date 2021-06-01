@@ -5,15 +5,15 @@
         </a>
         <span class="menu-spacer"></span>
         <div>
-            <a mat-button [routerLink]="'login'"> Login </a>
-            <a mat-button [routerLink]="'register'"> Create Account </a>
-            <a mat-button [routerLink]="'logout'"> Logout </a>
+            <a mat-button [routerLink]="'login'" *ngIf="!user"> Login </a>
+            <a mat-button [routerLink]="'register'" *ngIf="!user"> Create Account </a>
+            <a mat-button (click)="logout()" *ngIf="user"> Logout </a>
         </div>
     </mat-toolbar-row>
 
     <mat-toolbar-row>
         <span style="font-size: 12px;">
-            Login simple utilizando Angular 9 y Firebase Auth
+            {{user | json}}
         </span>
     </mat-toolbar-row>
 </mat-toolbar>

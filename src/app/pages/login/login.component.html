@@ -7,7 +7,7 @@
       <mat-card-content>
         <mat-tab-group>
             <mat-tab label="Login">
-                <form [formGroup]="loginForm" (ngSubmit)="login()">
+                <form [formGroup]="loginForm">
                     <mat-form-field class="example-full-width">
                     <mat-label>Email</mat-label>
                     <input type="email" matInput placeholder="Email" value="" formControlName="email">

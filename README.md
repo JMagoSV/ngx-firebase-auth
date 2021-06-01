@@ -30,3 +30,6 @@ Proyecto de ejemplo para autenticar usuarios utilizando Google Firebase.
 	
  8. **Agregar el servicio para auth**: ng g s services/auth
  9. **Crear un modelo para el usuario**: ng generate interface models/user
+
+## Dependencia para números telefónicos
+https://www.npmjs.com/package/ngx-intl-tel-input

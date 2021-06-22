@@ -26,6 +26,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth'
 import { environment } from 'src/environments/environment';
+import { LinkUpComponent } from './pages/link-up/link-up.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { environment } from 'src/environments/environment';
     LoginComponent,
     RegisterComponent,
     ForgotPasswordComponent,
-    VerifyEmailComponent
+    VerifyEmailComponent,
+    LinkUpComponent
   ],
   imports: [
     BrowserModule,

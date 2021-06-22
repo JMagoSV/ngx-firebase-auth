@@ -8,6 +8,7 @@
             <a mat-button [routerLink]="'login'" *ngIf="!user"> Login </a>
             <a mat-button [routerLink]="'register'" *ngIf="!user"> Create Account </a>
             <a mat-button (click)="logout()" *ngIf="user"> Logout </a>
+            <a mat-button [routerLink]="'linkup'" *ngIf="user"> Vincular cuentas </a>
         </div>
     </mat-toolbar-row>
 

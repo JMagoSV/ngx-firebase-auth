@@ -83,4 +83,32 @@ export class AuthService {
       window.alert('Usuario creado');
     });
   }
+
+  // Vincular las cuentas
+  linkUpEmailAndPassword(password: string) {
+    this.afAuth.authState.subscribe(userCredentials => {
+      if (userCredentials) {
+        const credential = firebase.default.auth.EmailAuthProvider.credential(userCredentials.email, password);
+        userCredentials.linkWithCredential(credential)
+      }
+    });
+  }
+
+  linkUpGmail() {
+    const provider = new firebase.default.auth.GoogleAuthProvider();
+    this.afAuth.authState.subscribe(userCredentials => {
+      if (userCredentials) {
+        userCredentials.linkWithPopup(provider);
+      }
+    });
+  }
+
+  linkUpFacebook() {
+    const provider = new firebase.default.auth.FacebookAuthProvider();
+    this.afAuth.authState.subscribe(userCredentials => {
+      if (userCredentials) {
+        userCredentials.linkWithPopup(provider);
+      }
+    });
+  }
 }

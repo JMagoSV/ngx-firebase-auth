@@ -13,6 +13,7 @@ export class AuthService {
   public authStatusSubject: BehaviorSubject<User> = new BehaviorSubject(undefined);
   public authStatus: Observable<User> = this.authStatusSubject.asObservable();
 
+  //const
   constructor(
     public afs: AngularFirestore,
     public afAuth: AngularFireAuth,
